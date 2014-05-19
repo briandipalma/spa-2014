@@ -5,6 +5,7 @@
 Recurring themes: vanishing tools (bundlers, module loaders, transpilers, frameworks)
 
 01:20 - 01:35 Overview, es6, source map, in browser dev
+
 	classes
 	modules
 	generators, array comprehensions
@@ -20,6 +21,7 @@ Recurring themes: vanishing tools (bundlers, module loaders, transpilers, framew
 	Object.observe
 
 01:35 - 02:20 Workshop: hands on es6, in browser dev
+
 play with the new features
 
 00:00 - 00:20 package management & webcomp.
@@ -28,13 +30,11 @@ play with the new features
 
 webcomponent app
 
-video chat
-system js
-slush
-gulp
-building custom webcomponent
-
-
+    video chat
+    system js
+    slush
+    gulp
+    building custom webcomponent
 
 01:10 - 01:20 break
 
