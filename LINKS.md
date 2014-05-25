@@ -1,0 +1,1 @@
+https://github.com/ModuleLoader/es6-module-loader/issues/58
