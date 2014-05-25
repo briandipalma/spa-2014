@@ -21,3 +21,6 @@ The module system offers two ways of solving this problem:
     Dependencies can be remapped at runtime. I can specify which URL to use for jquery, even having it resulting in different URLs based on the module that it is required from. So two modules can potentially get two versions of the same require to jquery, allowing version forking (which as dependency trees grow, may be useful one day).
 
 "
+
+
+Before/after slide showing Custom Element with classes and with ES5.
