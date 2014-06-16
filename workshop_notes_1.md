@@ -54,9 +54,11 @@ Module operations return promises to support Async/Dynamic loading.
 			
 To test your environment create a module that exports a function which prints "Hello World" to the console.
 
+A good URL to read up on ES6 features is https://github.com/lukehoban/es6features
+
 Using Promises create and export a function that asynchronously loads the JSON from the data folder.
 Use Arrow functions to simplify functions.
-Handle the login failure case where the value returned for "loggedIn" is false.
+Handle the login failure case where the URL requested returns 404 (rename the file).
 
 Using Generators simplify the function by yielding your promises.
 Use co to speed things up, this requires configuring the System loader with it's location.
