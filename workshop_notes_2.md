@@ -56,3 +56,6 @@ If you run `npm run serve` you can see a simple chat application without the `sp
 
 Open up the app template and add `spa2014-contacts-list` just under the `logged-out` div
 
+You will see that the `spa2014-contacts-list` in the application is the old incomplete one.
+To use your newer version of it open a cmd window, navigate to your `spa2014-contacts-list` and enter `npm link`
+Then from the cmd window navigate to the `spa-2014-app` and *as administrator in Windows* run `npm link spa-2014-contacts-list`.
