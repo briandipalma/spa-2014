@@ -45,3 +45,14 @@ The contacts should be added to the container.
 Add a click event listener to the custom element, use arrow functions to minimize boiler plate for the callback.
 
 Use destructuring to extract all the details from the event. Destructuring works to multiple levels.
+
+## Combine with other Custom Elements.
+
+git clone https://github.com/briandipalma/spa-2014-app
+
+All the custom elements are registered inside `src\index.js` including `spa2014-contacts-list`.
+
+If you run `npm run serve` you can see a simple chat application without the `spa2014-contacts-list` element.
+
+Open up the app template and add `spa2014-contacts-list` just under the `logged-out` div
+
