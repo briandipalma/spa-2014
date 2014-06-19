@@ -106,7 +106,9 @@ a simplified stub that loads the data from files.
     System.import('src/main')
         .then(function(comsModule) {
             comsModule.greet()
-        })
+        }.catch(function(error) {
+            console.error(error);
+        });
             
    You should see an alert when you load the page.
    
@@ -123,26 +125,26 @@ a simplified stub that loads the data from files.
     forgotten/don't know how to do xhrs.
     
 ```javascript
-    function get(url) {
-    	var xhr = new XMLHttpRequest();
-    	var promise = new Promise((resolve, reject) => {
-    		xhr.onreadystatechange = () => {
-    			if (xhr.readyState === 4 && xhr.status === 200) {
-    				resolve(xhr.response);
-    			} else if (xhr.readyState === 4 && xhr.status === 404) {
-    				reject(new Error(`Requested URL (${url}) unavailable`));
-    			}
-    		}
-    	});
-    
-    	xhr.open('GET', url);
-    	xhr.send();
-    
-    	return promise;
-    }
+function get(url) {
+	var xhr = new XMLHttpRequest();
+	var promise = new Promise((resolve, reject) => {
+		xhr.onreadystatechange = () => {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				resolve(xhr.response);
+			} else if (xhr.readyState === 4 && xhr.status === 404) {
+				reject(new Error(`Requested URL (${url}) unavailable`));
+			}
+		}
+	});
+
+	xhr.open('GET', url);
+	xhr.send();
+
+	return promise;
+}
 ```
     
-    export a loadData function that loads /data/login-user-pass.json
+    export a `loadData` function that loads /data/login-user-pass.json
     returns the promise.
     
     In index.html, call the loadData function and log the data
@@ -164,12 +166,16 @@ a simplified stub that loads the data from files.
     Add the 'co-promise' library package, which is a commonJS package that works
     both in the browser and nodejs and depends on a 'co' package.
     
+    Inside the index.html file before you call `System.import` add.
+
+   ```javascript
         System.config({
             map: {
                 "co": "node_modules/co/index",
                 "co-promise": "node_modules/co-promise/index"
             }
         });
+   ```
     
     This library has been brought into the project using npm and is already
     available.
