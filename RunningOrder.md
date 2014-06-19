@@ -122,6 +122,7 @@ a simplified stub that loads the data from files.
     response of the url request. Use this get function if you've 
     forgotten/don't know how to do xhrs.
     
+```javascript
     function get(url) {
     	var xhr = new XMLHttpRequest();
     	var promise = new Promise((resolve, reject) => {
@@ -139,6 +140,7 @@ a simplified stub that loads the data from files.
     
     	return promise;
     }
+```
     
     export a loadData function that loads /data/login-user-pass.json
     returns the promise.
