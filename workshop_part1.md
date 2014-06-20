@@ -22,10 +22,14 @@ To start
 
 1. Open up index.html
 
-	Traceur for compiling ES6 to ES5.
-	Give it ES6 it generates ES5, it's written in ES6 and compiles itself. Straight forward.
+	The script tag contents are as follows.
 	
-	The ES6 module loader polyfill https://github.com/ModuleLoader/es6-module-loader is a polyfill that implements the ES6 Loader factory/class.
+	Traceur compiles ES6 to ES5. It's written in ES6 and compiles itself.
+	https://github.com/google/traceur-compiler/
+	
+	The ES6 module loader polyfill is a polyfill that implements the ES6 Loader factory/class.
+	https://github.com/ModuleLoader/es6-module-loader
+	
 	ES6 Loader is Promises based.
 	It supports circular references.
 	Live bindings between modules.
