@@ -7,17 +7,18 @@ Workshop - Communicator
 -----------------------
 
 We'll be building some of the packages that make up a simple chat
-application.
-
-You will need references
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-    
-The first package we look at is the communicator, it's job will be
-to provide the messages, list of contacts and status.  In a real
+application. The first package we look at is the communicator, it's job will be
+to provide the messages, list of contacts and contact status.  In a real
 system this would communicate over websockets, but we'll just use
 a simplified stub that loads the data from files.
 
-    git clone https://github.com/briandipalma/spa-2014-communicator
+Helpful references
+
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+To start
+
+	git clone https://github.com/briandipalma/spa-2014-communicator
 
 1. Look at index.html
 
