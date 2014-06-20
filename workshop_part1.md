@@ -1,7 +1,7 @@
 Topic - Ecmascript 6
 --------------------
 
-http://slides.com/kybernetikos/apocolypse-es6
+http://slides.com/kybernetikos/apocalypse-es6#/
 
 Workshop - Communicator
 -----------------------
