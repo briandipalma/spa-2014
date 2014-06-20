@@ -14,26 +14,26 @@ a simplified stub that loads the data from files.
 
 Helpful references
 
-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 To start
 
 	git clone https://github.com/briandipalma/spa-2014-communicator
 
-1. Look at index.html
+1. Open up index.html
 
-    Traceur for compiling ES6 to ES5.
-        Give it ES6 it generates ES5, it's written in ES6 and compiles itself. Straight forward.
-    
-    The ES6 module loader polyfill https://github.com/ModuleLoader/es6-module-loader is a polyfill that implements the ES6 Loader factory/class.
-        ES6 Loader is Promises based.
-        It supports circular references.
-        Live bindings between modules.
-        Allows dynamic loading of content.
-        A module ID is *not* a URL or a file path.
+Traceur for compiling ES6 to ES5.
+Give it ES6 it generates ES5, it's written in ES6 and compiles itself. Straight forward.
 
-    A Specific module loader for browsers
-        Polyfills the browser Loader instance
+The ES6 module loader polyfill https://github.com/ModuleLoader/es6-module-loader is a polyfill that implements the ES6 Loader factory/class.
+ES6 Loader is Promises based.
+It supports circular references.
+Live bindings between modules.
+Allows dynamic loading of content.
+A module ID is *not* a URL or a file path.
+
+A Specific module loader for browsers
+Polyfills the browser Loader instance
         
 2. Make a module that alerts "Hello Module World!"
 
