@@ -24,20 +24,21 @@ To start
 
 	The script tag contents are as follows.
 	
-	Traceur compiles ES6 to ES5. It's written in ES6 and compiles itself.
+	Traceur compiles ES6+ to ES5. It's written in ES6 and compiles itself.
 	https://github.com/google/traceur-compiler/
 	
-	The ES6 module loader polyfill is a polyfill that implements the ES6 Loader factory/class.
+	ES6 module loader is a polyfill that implements the ES6 Loader factory/class.
 	https://github.com/ModuleLoader/es6-module-loader
+	
+	SystemJS provides a polyfill for `System` the browser version of the ES6 module loader.
+	It loads ES6 modules, AMD, CommonJS and global scripts.
+	https://github.com/systemjs/systemjs/
 	
 	ES6 Loader is Promises based.
 	It supports circular references.
 	Live bindings between modules.
 	Allows dynamic loading of content.
 	A module ID is *not* a URL or a file path.
-	
-	A Specific module loader for browsers
-	Polyfills the browser Loader instance
         
 2. Make a module that alerts "Hello Module World!"
 
