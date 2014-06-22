@@ -110,6 +110,7 @@ To start
 5. Error handling
 
 	The `get` function `reject`s the `Promise` if the request `status`  is 404.
+	It uses template strings to interpolate the failed url into the error message.
 	Handle the `Promise` rejection case by logging the returned error to `console.error`.
 	The System loader code in `index.html` shows how to handle a `Promise` rejection.
 
