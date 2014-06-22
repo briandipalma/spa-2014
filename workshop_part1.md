@@ -77,10 +77,10 @@ To start
 4. Load the user login data
 
 	We simulate asking the server if we have successfully logged in
-	by providing a `login-user-pass.json` file to retrieve.
+	by requesting `/data/login-user-pass.json`.
 
-	In the `main` module create a function that returns a promise that resolves with the response of a url request.
-	Use this `get` function if you've forgotten/don't know how to do xhrs.
+	In the `main` module add a function that when given a URL returns a promise that resolves with the URL response.
+	Use this `get` function if you've forgotten/don't know how to do XHRs.
 
 	```javascript
 	function get(url) {
