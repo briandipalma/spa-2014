@@ -38,12 +38,17 @@ To start
 
 	All these packages can be served by a simple static server rooted at the package directory.
 	A simple static server is included in the package and can be launched with the command,
-	
+
 	```bash
 	$ npm run serve
 	```
-	You can use your own if you wish - there is no need for special server logic for ES6 modules.
+
+	, executed in the root package directory.
 	
+	The included server will serve the package at http://127.0.0.1:8080
+
+	You can use your own server if you wish - there is no need for special server logic for ES6 modules.
+
 2. Make a module that alerts "Hello Module World!"
 
    Create a src/main.js in your project
