@@ -113,7 +113,7 @@ To start
 	Handle the `Promise` rejection case by logging the returned error to `console.error`.
 	The System loader code in `index.html` shows how to handle a `Promise` rejection.
 
-	Simulate an error by renaming the json file and reload to check	that you log the error.
+	Simulate an error by modifying your url argument and reload to check that you log the error.
 
 5. Load all of the .json paths in /data using Promise.all
 
