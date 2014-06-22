@@ -103,7 +103,7 @@ To start
 
 	Create a new function in the `main` module called `loadData`.
 	Make `loadData` call `get` requesting the `/data/login-user-pass.json` resource and log the response.
-	The System loader is a `Promise`s based API and it shows how to handle a `Promise`.
+	The System loader code in `index.html` shows how to handle a `Promise` resolution.
 
 	To test `loadData` export it from the `main` module and call it in `index.html`.
 
