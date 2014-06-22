@@ -74,20 +74,20 @@ To start
 
 	You should see an alert when you load the page.
 
-3. Load the user login data
+4. Load the user login data
 
-    We simulate asking the server if we have successfully logged in
-    by providing a login-user-pass.json file you can retrieve.
-
-    You need to handle both success and failure cases (e.g. the 
-    file doesn't exist and your request returns 404).
-    
-    Create a function that returns a promise that resolves with the
-    response of the url request. Use this get function if you've 
-    forgotten/don't know how to do xhrs.
-    
-```javascript
-function get(url) {
+	We simulate asking the server if we have successfully logged in
+	by providing a login-user-pass.json file you can retrieve.
+	
+	You need to handle both success and failure cases (e.g. the 
+	file doesn't exist and your request returns 404).
+	
+	Create a function that returns a promise that resolves with the
+	response of the url request. Use this get function if you've 
+	forgotten/don't know how to do xhrs.
+	
+	```javascript
+	function get(url) {
 	var xhr = new XMLHttpRequest();
 	var promise = new Promise((resolve, reject) => {
 		xhr.onreadystatechange = () => {
@@ -98,54 +98,54 @@ function get(url) {
 			}
 		}
 	});
-
+	
 	xhr.open('GET', url);
 	xhr.send();
-
+	
 	return promise;
-}
-```
+	}
+	```
+	
+	export a `loadData` function that loads /data/login-user-pass.json
+	returns the promise.
+	
+	In index.html, call the loadData function and log the data
+	and deal with any error.
+	
+	Simulate an error by renaming the json file and reload to check
+	that you handle the error.
     
-    export a `loadData` function that loads /data/login-user-pass.json
-    returns the promise.
+5.  Load all of the .json paths in /data using Promise.all
     
-    In index.html, call the loadData function and log the data
-    and deal with any error.
-    
-    Simulate an error by renaming the json file and reload to check
-    that you handle the error.
-    
-4.  Load all of the .json paths in /data using Promise.all
-    
-5.  Make your async code look synchronous
-   
-    You can combine promises with generators to write asynchronous
-    code as if it were synchronous.
-    
-    This will be built into es7 (with await async functions, like c#)
-    but for now, we can use a library to provide the same functionality
-    
-    Add the 'co-promise' library package, which is a commonJS package that works
-    both in the browser and nodejs and depends on a 'co' package.
-    
-    Inside the index.html file before you call `System.import` add.
+6.  Make your async code look synchronous
 
-   ```javascript
-        System.config({
-            map: {
-                "co": "node_modules/co/index",
-                "co-promise": "node_modules/co-promise/index"
-            }
-        });
-   ```
-    
-    This library has been brought into the project using npm and is already
-    available.
-    
-    Until it's built into the language in es7, you have to use co to run your
-    code.
-    
-       import co from "co-promise";
-    
-    Now rewrite your method to look like synchronous code.  Don't forget to
-    handle error cases.
+	You can combine promises with generators to write asynchronous
+	code as if it were synchronous.
+	
+	This will be built into es7 (with await async functions, like c#)
+	but for now, we can use a library to provide the same functionality
+	
+	Add the 'co-promise' library package, which is a commonJS package that works
+	both in the browser and nodejs and depends on a 'co' package.
+	
+	Inside the index.html file before you call `System.import` add.
+	
+	```javascript
+	System.config({
+	    map: {
+	        "co": "node_modules/co/index",
+	        "co-promise": "node_modules/co-promise/index"
+	    }
+	});
+	```
+	
+	This library has been brought into the project using npm and is already
+	available.
+	
+	Until it's built into the language in es7, you have to use co to run your
+	code.
+	
+	import co from "co-promise";
+	
+	Now rewrite your method to look like synchronous code.  Don't forget to
+	handle error cases.
