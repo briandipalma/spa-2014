@@ -34,12 +34,16 @@ To start
 	It loads ES6 modules, AMD, CommonJS and global scripts.
 	https://github.com/systemjs/systemjs/
 	
-	ES6 Loader is Promises based.
-	It supports circular references.
-	Live bindings between modules.
-	Allows dynamic loading of content.
-	A module ID is *not* a URL or a file path.
-        
+2. Serve the package
+
+	All these packages can be served by a simple static server rooted at the package directory.
+	A simple static server is included in the package and can be launched with the command,
+	
+	```bash
+	$ npm run serve
+	```
+	You can use your own if you wish - there is no need for special server logic for ES6 modules.
+	
 2. Make a module that alerts "Hello Module World!"
 
    Create a src/main.js in your project
