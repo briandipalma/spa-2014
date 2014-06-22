@@ -77,15 +77,11 @@ To start
 4. Load the user login data
 
 	We simulate asking the server if we have successfully logged in
-	by providing a login-user-pass.json file you can retrieve.
-	
-	You need to handle both success and failure cases (e.g. the 
-	file doesn't exist and your request returns 404).
-	
-	Create a function that returns a promise that resolves with the
-	response of the url request. Use this get function if you've 
-	forgotten/don't know how to do xhrs.
-	
+	by providing a `login-user-pass.json` file to retrieve.
+
+	In the `main` module create a function that returns a promise that resolves with the response of a url request.
+	Use this `get` function if you've forgotten/don't know how to do xhrs.
+
 	```javascript
 	function get(url) {
 	var xhr = new XMLHttpRequest();
@@ -105,19 +101,24 @@ To start
 	return promise;
 	}
 	```
-	
-	export a `loadData` function that loads /data/login-user-pass.json
+
+	From the `main` module export a `loadData` function that loads `/data/login-user-pass.json`
 	returns the promise.
 	
 	In index.html, call the loadData function and log the data
 	and deal with any error.
+
+5. Error loading
+
+	For login we need to handle both success and failure cases (e.g. the 
+	server returns 404).
 	
 	Simulate an error by renaming the json file and reload to check
 	that you handle the error.
     
-5.  Load all of the .json paths in /data using Promise.all
-    
-6.  Make your async code look synchronous
+5. Load all of the .json paths in /data using Promise.all
+
+6. Make your async code look synchronous
 
 	You can combine promises with generators to write asynchronous
 	code as if it were synchronous.
