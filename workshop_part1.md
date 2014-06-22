@@ -103,19 +103,18 @@ To start
 
 	Create a new function in the `main` module called `loadData`.
 	Make `loadData` call `get` requesting the `/data/login-user-pass.json` resource and log the response.
+	The System loader is a `Promise`s based API and it shows how to handle a `Promise`.
 
 	To test `loadData` export it from the `main` module and call it in `index.html`.
 
-5. Error loading
+5. Error handling
 
-	, call the loadData function and log the data
-	and deal with any error.
-	For login we need to handle both success and failure cases (e.g. the 
-	server returns 404).
-	
-	Simulate an error by renaming the json file and reload to check
-	that you handle the error.
-    
+	The `get` function `reject`s the `Promise` if the request `status`  is 404.
+	Handle the `Promise` rejection case by logging the returned error to `console.error`.
+	The System loader code in `index.html` shows how to handle a `Promise` rejection.
+
+	Simulate an error by renaming the json file and reload to check	that you log the error.
+
 5. Load all of the .json paths in /data using Promise.all
 
 6. Make your async code look synchronous
