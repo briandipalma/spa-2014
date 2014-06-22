@@ -20,9 +20,9 @@ To start
 
 	git clone https://github.com/briandipalma/spa-2014-communicator
 
-1. Open up index.html
+1. Open up `index.html`
 
-	The script tag contents are as follows.
+	The `script` tag contents are as follows.
 	
 	Traceur compiles ES6+ to ES5. It's written in ES6 and compiles itself.
 	https://github.com/google/traceur-compiler/
@@ -36,8 +36,8 @@ To start
 	
 2. Serve the package
 
-	All these packages can be served by a simple static server rooted at the package directory.
-	A simple static server is included in the package and can be launched with the command,
+	All these packages can be served by a static server rooted at the package directory.
+	One is included in the package and can be launched with the command,
 
 	```bash
 	$ npm run serve
@@ -49,24 +49,26 @@ To start
 
 	You can use your own server if you wish - there is no need for special server logic for ES6 modules.
 
-2. Make a module that alerts "Hello Module World!"
+3. Make a module that alerts "Hello World!"
 
-   Create a src/main.js in your project
-   
-    export function greet() {
-        alert('Hello module world')
-    }   
-
-   In index.html use the System loader to load the hello.js module.
-   
-    System.import('src/main')
-        .then(function(comsModule) {
-            comsModule.greet()
-        }.catch(function(error) {
-            console.error(error);
-        });
-            
-   You should see an alert when you load the page.
+	Create `src/main.js` in your project. Inside it place,
+	
+	```javascript
+	export function greet() {
+		alert('Hello world');
+	}
+	```
+	
+	In index.html use the System loader to load the hello.js module.
+	
+	System.import('src/main')
+	.then(function(comsModule) {
+	    comsModule.greet()
+	}.catch(function(error) {
+	    console.error(error);
+	});
+	    
+	You should see an alert when you load the page.
    
 3. Load the user login data
 
