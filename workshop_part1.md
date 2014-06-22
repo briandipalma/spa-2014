@@ -67,7 +67,7 @@ To start
 	System.import('src/main')
 		.then(function(module) {
 		    module.greet();
-		}.catch(function(error) {
+		}).catch(function(error) {
 		    console.error(error);
 		});
 	```
