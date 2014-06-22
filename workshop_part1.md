@@ -59,7 +59,9 @@ To start
 	}
 	```
 
-	In `index.html` use the System loader to load the `main` module.
+	Use the System loader to load the `main` module.
+	Inside `index.html` in the empty `script` tag at the end of the `head` element add
+
 
 	```javascript
 	System.import('src/main')
@@ -71,7 +73,7 @@ To start
 	```
 
 	You should see an alert when you load the page.
-   
+
 3. Load the user login data
 
     We simulate asking the server if we have successfully logged in
