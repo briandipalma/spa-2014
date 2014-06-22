@@ -52,22 +52,24 @@ To start
 3. Make a module that alerts "Hello World!"
 
 	Create `src/main.js` in your project. Inside it place,
-	
+
 	```javascript
 	export function greet() {
 		alert('Hello world');
 	}
 	```
-	
-	In index.html use the System loader to load the hello.js module.
-	
+
+	In `index.html` use the System loader to load the `main` module.
+
+	```javascript
 	System.import('src/main')
-	.then(function(comsModule) {
-	    comsModule.greet()
-	}.catch(function(error) {
-	    console.error(error);
-	});
-	    
+		.then(function(module) {
+		    module.greet();
+		}.catch(function(error) {
+		    console.error(error);
+		});
+	```
+
 	You should see an alert when you load the page.
    
 3. Load the user login data
