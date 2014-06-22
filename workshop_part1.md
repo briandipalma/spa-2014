@@ -76,40 +76,40 @@ To start
 
 4. Load the user login data
 
-	We simulate asking the server if we have successfully logged in
-	by requesting `/data/login-user-pass.json`.
+	We simulate asking the server if we have successfully logged in	by requesting `/data/login-user-pass.json`.
 
 	In the `main` module add a function that when given a URL returns a promise that resolves with the URL response.
 	Use this `get` function if you've forgotten/don't know how to do XHRs.
 
 	```javascript
 	function get(url) {
-	var xhr = new XMLHttpRequest();
-	var promise = new Promise((resolve, reject) => {
-		xhr.onreadystatechange = () => {
-			if (xhr.readyState === 4 && xhr.status === 200) {
-				resolve(xhr.response);
-			} else if (xhr.readyState === 4 && xhr.status === 404) {
-				reject(new Error(`Requested URL (${url}) unavailable`));
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', url);
+		xhr.send();
+
+		var promise = new Promise((resolve, reject) => {
+			xhr.onload = () => {
+				if (xhr.status === 200) {
+					resolve(xhr.response);
+				} else if (xhr.status === 404) {
+					reject(new Error(`Requested URL (${url}) unavailable`));
+				}
 			}
-		}
-	});
-	
-	xhr.open('GET', url);
-	xhr.send();
-	
-	return promise;
+		});
+
+		return promise;
 	}
 	```
 
-	From the `main` module export a `loadData` function that loads `/data/login-user-pass.json`
-	returns the promise.
-	
-	In index.html, call the loadData function and log the data
-	and deal with any error.
+	Create a new function in the `main` module called `loadData`.
+	Make `loadData` call `get` requesting the `/data/login-user-pass.json` resource and log the response.
+
+	To test `loadData` export it from the `main` module and call it in `index.html`.
 
 5. Error loading
 
+	, call the loadData function and log the data
+	and deal with any error.
 	For login we need to handle both success and failure cases (e.g. the 
 	server returns 404).
 	
