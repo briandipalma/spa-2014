@@ -116,7 +116,10 @@ To start
 
 	Simulate an error by modifying your url argument and reload to check that you log the error.
 
-6. Load all of the .json paths in /data using Promise.all
+6. Load the rest of the chat data using Promise.all
+
+	Once we have successfully logged in we need to retrieve the message and contacts data.
+	We can do this using the static method `Promise.all`.
 
 	`Promise.all(iterable)`
 	> Returns a promise that resolves when all of the promises in iterable have resolved. The result is passed an array of values from all the promises. If something passed in the iterable array is not a promise, it's converted to one by Promise.cast. If any of the passed in promises rejects, the all Promise immediately rejects with the value of the promise that rejected, discarding all the other promises whether or not they have resolved. 
