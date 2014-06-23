@@ -128,6 +128,7 @@ To start
 	> array of values from all the promises.
 
 	An array is an iterable in ES6. These requests should only be made if the login request was successful.
+	Request 'data/contacts-user.json', 'data/chat-messages.json' and 'data/recent-messages-user.json'.
 
 7. Make your async code look synchronous
 
