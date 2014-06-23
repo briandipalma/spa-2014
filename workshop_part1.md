@@ -117,7 +117,8 @@ To start
 	Simulate an error by modifying your url argument and reload to check that you log the error.
 
 6. Load all of the .json paths in /data using Promise.all
-	 `Promise.all(iterable)`
+
+	`Promise.all(iterable)`
 	> Returns a promise that resolves when all of the promises in iterable have resolved. The result is passed an array of values from all the promises. If something passed in the iterable array is not a promise, it's converted to one by Promise.cast. If any of the passed in promises rejects, the all Promise immediately rejects with the value of the promise that rejected, discarding all the other promises whether or not they have resolved. 
 
 6. Make your async code look synchronous
