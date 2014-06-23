@@ -124,7 +124,7 @@ To start
 	`Promise.all(iterable)`
 	> Returns a promise that resolves when all of the promises in iterable have resolved. The result is passed an array of values from all the promises. If something passed in the iterable array is not a promise, it's converted to one by Promise.cast. If any of the passed in promises rejects, the all Promise immediately rejects with the value of the promise that rejected, discarding all the other promises whether or not they have resolved. 
 
-6. Make your async code look synchronous
+7. Make your async code look synchronous
 
 	You can combine promises with generators to write asynchronous
 	code as if it were synchronous.
