@@ -230,3 +230,22 @@ To start
 	It will resume the generator only when all promises have resolved or one has rejected.
 
 	This leaves the error handling functionality. We only wanted to make requests if login succeeded.
+	Thanks to generators we can use a familiar synchronous approach for this, `try\catch`.
+
+	The final result is code with synchronous appearance while being asynchronous, non blocking code.
+
+	```javascript
+	function *loadDataGen() {
+		try {
+			yield get('data/login-user-pass.json');
+		} catch (loginError) {
+			return loginError;
+		}
+
+		return yield [
+			get('/data/contacts-user.json'),
+			get('/data/chat-messages.json'),
+			get('/data/recent-messages-user.json')
+		];
+	}
+	```
