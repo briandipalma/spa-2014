@@ -153,7 +153,7 @@ To start
 	> Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value
 	> of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.
 
-7. Make your async code look synchronous
+7. Import an external CommonJS package
 
 	The purpose of the promise code is somewhat obscured by the promise boilerplate.
 	So lets combine promises with another ES6 feature, generators, to clean the code up. 
@@ -161,11 +161,11 @@ To start
 
 	This functionality will be built into ES7 (with async functions, like C#'s).
 	For the moment though we need to use a package. Specifically the `co-promise` package.
-	It is a commonJS package that works both in the browser and nodejs and depends on a 'co' package.
+	It is a CommonJS package that works both in the browser and nodejs and depends on a 'co' package.
 
 	Firstly we need to tell the `System` loader where these packages can be found.
 	Inside `index.html` before you call `System.import` add this configuration.
-	
+
 	```javascript
 	System.config({
 		map: {
@@ -175,12 +175,17 @@ To start
 	});
 	```
 
-	This library has been brought into the project using npm and is already
-	available.
-	
-	import co from "co-promise";
-	
-	Now rewrite your method to look like synchronous code.  Don't forget to
-	handle error cases.
+	This library has been brought into the project using npm and is already	available.
+
+	Then you must import `co` from `co-promise` at the top of your `main` module.
+
+	```javascript
+	import co from 'co-promise';
+	```
+
+	If you save and reload you should see two extra files requested for `co` and `co-promise`.
 
 8. Make your async code look synchronous
+
+	Now rewrite your method to look like synchronous code.  Don't forget to
+	handle error cases.
