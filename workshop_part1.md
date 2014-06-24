@@ -155,33 +155,32 @@ To start
 
 7. Make your async code look synchronous
 
-	You can combine promises with generators to write asynchronous
-	code as if it were synchronous.
-	
-	This will be built into es7 (with await async functions, like c#)
-	but for now, we can use a library to provide the same functionality
-	
-	Add the 'co-promise' library package, which is a commonJS package that works
-	both in the browser and nodejs and depends on a 'co' package.
-	
-	Inside the index.html file before you call `System.import` add.
+	The purpose of the promise code is somewhat obscured by the promise boilerplate.
+	So lets combine promises with another ES6 feature, generators, to clean the code up. 
+	This will allow us to make the asynchronous code look more synchronous.
+
+	This functionality will be built into ES7 (with async functions, like C#'s).
+	For the moment though we need to use a package. Specifically the `co-promise` package.
+	It is a commonJS package that works both in the browser and nodejs and depends on a 'co' package.
+
+	Firstly we need to tell the `System` loader where these packages can be found.
+	Inside `index.html` before you call `System.import` add this configuration.
 	
 	```javascript
 	System.config({
-	    map: {
-	        "co": "node_modules/co/index",
-	        "co-promise": "node_modules/co-promise/index"
-	    }
+		map: {
+			"co": "node_modules/co/index",
+			"co-promise": "node_modules/co-promise/index"
+		}
 	});
 	```
-	
+
 	This library has been brought into the project using npm and is already
 	available.
-	
-	Until it's built into the language in es7, you have to use co to run your
-	code.
 	
 	import co from "co-promise";
 	
 	Now rewrite your method to look like synchronous code.  Don't forget to
 	handle error cases.
+
+8. Make your async code look synchronous
