@@ -187,5 +187,13 @@ To start
 
 8. Make your async code look synchronous
 
+	`co` runs generators so we must create a generator function for it to run.
+	`co` also handles promises in a special manner.
+	If you `yield` a promise it will wait for it to resolve.
+	If the promise fulfills it will pass in the promise value to the generator.
+	If the promise rejects it will make the generator `throw` the rejection value.
+
+	
+
 	Now rewrite your method to look like synchronous code.  Don't forget to
 	handle error cases.
