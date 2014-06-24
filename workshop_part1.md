@@ -133,7 +133,7 @@ To start
 	For this step you will need to know what happens when you return a promise within a promise resolved handler.
 	
 	```javascript
-	get('/data/login-user-pass.json')
+	myPromise
 		.then((response) => {
 			return anotherPromise //We return another promise here.
 		})
