@@ -121,14 +121,31 @@ To start
 	Firstly correct the login url from the previous step!
 
 	Once we have successfully logged in we need to retrieve the message and contacts data.
-	We can do this using the static method `Promise.all`.
+	This can be done in parallel using the static method `Promise.all`.
 
 	`Promise.all(iterable)`
 	> Returns a promise that resolves when all of the promises in iterable have resolved. The result is passed an
 	> array of values from all the promises.
 
 	An array is an iterable in ES6. These requests should only be made if the login request was successful.
-	Request 'data/contacts-user.json', 'data/chat-messages.json' and 'data/recent-messages-user.json'.
+	Request `data/contacts-user.json`, `data/chat-messages.json` and `data/recent-messages-user.json`.
+
+	For this step you will need to know what happens when you return a promise within a promise resolved handler.
+	
+	```javascript
+	get('/data/login-user-pass.json')
+		.then((response) => {
+			return anotherPromise //We return another promise here.
+		})
+		... //Deal with errors.
+		.then((anotherPromiseValue) => {
+			//The passed in value is the resolved value of anotherPromise.
+		})
+		...
+	```
+
+	The containing promise won't resolve until the promise returned in the `then` resolves.
+	And when it does resolve it will resolve with the value of the returned promise.
 
 7. Make your async code look synchronous
 
