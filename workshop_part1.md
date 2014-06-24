@@ -147,6 +147,12 @@ To start
 	The containing promise won't resolve until the promise returned in the `then` resolves.
 	And when it does resolve it will resolve with the value of the promise returned in the `then`.
 
+	You can log the returned data by chaining onto the error handling from the previous step.
+
+	`Promise.prototype.catch(onRejected)`
+	> Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value
+	> of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.
+
 7. Make your async code look synchronous
 
 	You can combine promises with generators to write asynchronous
