@@ -188,12 +188,33 @@ To start
 8. Make your async code look synchronous
 
 	`co` runs generators so we must create a generator function for it to run.
-	`co` also handles promises in a special manner.
-	If you `yield` a promise it will wait for it to resolve.
-	If the promise fulfills it will pass in the promise value to the generator.
+	`co` handles promises in a special manner. If you `yield` a promise it will wait for it to resolve.
+
+	If the promise fulfills it will pass the promise value in to the generator.
 	If the promise rejects it will make the generator `throw` the rejection value.
 
-	
+	Lets see this in action. Firstly create a generator function yielding the login promise.
+	Remember that generator functions need to be denoted with a `*` prefix.
 
-	Now rewrite your method to look like synchronous code.  Don't forget to
-	handle error cases.
+	```javascript
+	function *loadDataGen() {
+		return yield get('data/login-user-pass.json');
+	}
+	```
+
+	Create a new function called `loadDataPromise` and copy the `loadData` contents into it.
+	This is to allow you to compare the two code styles and quickly test the generator code.
+
+	Inside `loadData` call `co` with a new generator from your generator function.
+
+	```javascript
+	export function loadData() {
+		co(loadDataGen())
+			.catch((error) => {
+				console.error(error);
+			})
+			.then((response) => {
+				console.log(response);
+			});
+	}
+	```
