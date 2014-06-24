@@ -145,7 +145,7 @@ To start
 	```
 
 	The containing promise won't resolve until the promise returned in the `then` resolves.
-	And when it does resolve it will resolve with the value of the returned promise.
+	And when it does resolve it will resolve with the value of the promise returned in the `then`.
 
 7. Make your async code look synchronous
 
