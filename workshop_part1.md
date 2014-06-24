@@ -188,7 +188,8 @@ To start
 8. Make your async code look synchronous
 
 	`co` runs generators so we must create a generator function for it to run.
-	`co` handles promises in a special manner. If you `yield` a promise it will wait for it to resolve.
+	`co` handles promises in a special manner.
+	If you `yield` a promise it will wait for it to resolve before continuing the generator.
 
 	If the promise fulfills it will pass the promise value in to the generator.
 	If the promise rejects it will make the generator `throw` the rejection value.
@@ -198,7 +199,7 @@ To start
 
 	```javascript
 	function *loadDataGen() {
-		return yield get('data/login-user-pass.json');
+		yield get('data/login-user-pass.json');
 	}
 	```
 
@@ -218,3 +219,14 @@ To start
 			});
 	}
 	```
+
+	The `co` function from `co-promise` returns a promise so we can use the same logging code as the previous steps.
+	Saving and reloading will log `undefined` as the generator function `loadDataGen` returns nothing.
+
+9. Handle errors and return all chat data
+
+	To match the functionality of the promises based code all the other requests have to be executed too.
+	Helpfully if `co` is given an array of promises it will act like `Promise.all`.
+	It will resume the generator only when all promises have resolved or one has rejected.
+
+	This leaves the error handling functionality. We only wanted to make requests if login succeeded.
