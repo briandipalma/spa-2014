@@ -6,8 +6,8 @@ http://slides.com/kybernetikos/webcomponents
 Workshop - Contacts List
 ------------------------
 
-The next piece that we'll be building is a custom element that shows a list of
-contacts to go in our chat application.
+The next package that we look at is the contacts list.
+As the name suggests it is a custom element that shows a list of contacts for our chat application.
 
     git clone https://github.com/briandipalma/spa-2014-contacts-list
 
