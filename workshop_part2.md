@@ -82,10 +82,6 @@ To start
 
     render is the function that's called whenever the state changes. For simplicity you can
     discard the entire DOM everytime.
-    
-3. Add a <spa2014-contacts-list> element to the body of the index.html
-    Load up the index.html file in your browser and see the element in the inspector
-    and check for the console logs.
 
 4. In the render method, iterate over the state map and display its data in the
     DOM.
