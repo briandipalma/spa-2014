@@ -23,9 +23,12 @@ To start
     `System.config` now has `css` and `text` loading plugins which allow the ES6 module loader to load css and text files.
     The CSS plugin automatically attaches the css to the head as soon as you import the css module.
     The text plugin returns the content of the file as a javascript string.
-
     The other packages are for integration later.
 
+2. Open `src\index.js`
+
+    This is our package's entry point, it's the module that's loaded in the `index.html` file.
+    You can see that it re-exports `ContactsListElement`.
     This custom element is already wired up to be notified of model changes.
 
     Look at ContactsListElement.js
