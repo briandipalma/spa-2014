@@ -41,6 +41,18 @@ To start
     this.innerHTML = contactsListTemplate;
     ```
 
+    All DOM methods can be now run on the `this` pointer. 
+    For instance if you wanted to add an event listener to your element you would write.
+
+    ```javascript    
+    this.addEventListener('event', (event) => console.log('click'));
+    ```
+
+4. Register the custom element
+
+    implementation ContactsListElement in index.html under the name spa2014-contacts-list
+
+5. S
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
 
@@ -50,10 +62,6 @@ To start
 
     render is the function that's called whenever the state changes. For simplicity you can
     discard the entire DOM everytime.
-
-
-4. Register the custom element implementation ContactsListElement in index.html
-    under the name spa2014-contacts-list
     
 3. Add a <spa2014-contacts-list> element to the body of the index.html
     Load up the index.html file in your browser and see the element in the inspector
