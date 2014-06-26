@@ -14,23 +14,22 @@ To start
     git clone https://github.com/briandipalma/spa-2014-contacts-list
 
 1. Open `index.html`
-    
+
     There is one new `script` tag.
-    
+
     It's the Custom Elements polyfill, part of the polymer project.
     https://github.com/Polymer/CustomElements
-    
-    System.config now has css and text loading plugin which allows the es6
-    module loader to load css and text files.  The CSS plugin automatically
-    attaches the css to the head as soon as you import the css module.  The
-    text plugin returns the content of the file as a javascript string.
-    
-    The other libraries are for integration later.
-    
+
+    `System.config` now has `css` and `text` loading plugins which allow the ES6 module loader to load css and text files.
+    The CSS plugin automatically attaches the css to the head as soon as you import the css module.
+    The text plugin returns the content of the file as a javascript string.
+
+    The other packages are for integration later.
+
     This custom element is already wired up to be notified of model changes.
-    
+
     Look at ContactsListElement.js
-    
+
     The state member variable holds the information that needs to be added to the DOM, it's an ES6 Map.
     It's keys are usernames and values are a objects with keys "status" (value of "online" or "offline") and
     "imageSource" which is a URL for a user avatar.
