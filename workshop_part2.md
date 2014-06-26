@@ -9,9 +9,11 @@ Workshop - Contacts List
 The next package that we look at is the contacts list.
 It is a custom element that shows a list of contacts for our chat application.
 
-    git clone https://github.com/briandipalma/spa-2014-contacts-list
+To start
 
-1. Look at index.html
+    `git clone https://github.com/briandipalma/spa-2014-contacts-list`
+
+1. Look at `index.html`
 
     We haven't used html imports/templates/shadow dom polyfills.
     
