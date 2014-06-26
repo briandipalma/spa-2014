@@ -11,7 +11,7 @@ It is a custom element that shows a list of contacts for our chat application.
 
 To start
 
-    `git clone https://github.com/briandipalma/spa-2014-contacts-list`
+`git clone https://github.com/briandipalma/spa-2014-contacts-list`
 
 1. Look at `index.html`
 
