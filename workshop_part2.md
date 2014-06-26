@@ -50,11 +50,14 @@ To start
 
 4. Register the custom element
 
-    For the browser to match up Custom Element tag names with your JS Custom Element classes you need to register them.
+    For the browser to match up a Custom Element tag name with your JS Custom Element class you need to register it.
     The method to use for registration is `document.registerElement`.
-    It expects the custom element type (tagname) and then the custom element class to be passed in.
+    It expects the element type (tagname) and then the element class to be passed in.
 
-    Inside `index.html` register the `ContactsListElement` under the name `spa2014-contacts-list`.
+    Inside `index.html` register `ContactsListElement` under the name `spa2014-contacts-list`.
+    The module object will provide the element as `module.ContactsListElement` since it's exported by `index`.
+
+    d
 
 5. S
     As there is no default model solution for Web Components we've had to provide our own.
