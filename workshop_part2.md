@@ -17,11 +17,8 @@ To start
     
     There is one new `script` tag.
     
-    It's the Custom Elements polyfill.
-    We haven't used html imports/templates/shadow dom polyfills.
-    
-    The new script we've added is the custom-elements polyfill, which is part of
-    the polymer project.
+    It's the Custom Elements polyfill, part of the polymer project.
+    https://github.com/Polymer/CustomElements
     
     System.config now has css and text loading plugin which allows the es6
     module loader to load css and text files.  The CSS plugin automatically
