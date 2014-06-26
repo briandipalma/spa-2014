@@ -16,7 +16,6 @@ To start
 1. Open `index.html`
 
     There is one new `script` tag.
-
     It's the Custom Elements polyfill, part of the polymer project.
     https://github.com/Polymer/CustomElements
 
@@ -34,20 +33,18 @@ To start
 3. Open `src/ContactsListElement.js`
 
     This custom element is already wired up to be notified of model changes.
-    
-    Look at ContactsListElement.js
-    
+
     The state member variable holds the information that needs to be added to the DOM, it's an ES6 Map.
     It's keys are usernames and values are a objects with keys "status" (value of "online" or "offline") and
     "imageSource" which is a URL for a user avatar.
-    
+
     render is the function that's called whenever the state changes. For simplicity you can
     discard the entire DOM everytime.
-    
+
     A Custom Element is just a HTML element so standard DOM methods will work on it 
     (this).
 
-2. Register the custom element implementation ContactsListElement in index.html
+4. Register the custom element implementation ContactsListElement in index.html
     under the name spa2014-contacts-list
     
 3. Add a <spa2014-contacts-list> element to the body of the index.html
