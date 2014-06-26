@@ -15,14 +15,14 @@ To start
 
 1. Open `index.html`
 
-	    There is one new `script` tag.
-	    It's the Custom Elements polyfill, part of the polymer project.
-	    https://github.com/Polymer/CustomElements
-	
-	    `System.config` now has `css` and `text` loading plugins which allow the `System` module loader to load css and text.
-	    The CSS plugin automatically attaches the css to the head as soon as you import the css module.
-	    The text plugin returns the content of the file as a javascript string.
-	    The other packages are for integration later.
+    There is one new `script` tag.
+    It's the Custom Elements polyfill, part of the polymer project.
+    https://github.com/Polymer/CustomElements
+
+    `System.config` now has `css` and `text` loading plugins which allow the `System` module loader to load css and text.
+    The CSS plugin automatically attaches the css to the head as soon as you import the css module.
+    The text plugin returns the content of the file as a javascript string.
+    The other packages are for integration later.
 
 2. Open `src/index.js`
 
@@ -56,7 +56,7 @@ To start
 	```bash
 	$ npm run serve
 	```
-
+	
 	The included server will serve the package at http://127.0.0.1:8080
 	Opening the console should show none of the log lines from the element.
 
