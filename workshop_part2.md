@@ -29,10 +29,14 @@ To start
 
     This is our package's entry point. It's also the module that's loaded in the `index.html` file.
     You can see that it re-exports `ContactsListElement` from the `'./ContactsListElement'` module.
+    The name it re-exports it as is `ContactsListElement`.
+
+3. Open `src/ContactsListElement.js`
+
     This custom element is already wired up to be notified of model changes.
-
+    
     Look at ContactsListElement.js
-
+    
     The state member variable holds the information that needs to be added to the DOM, it's an ES6 Map.
     It's keys are usernames and values are a objects with keys "status" (value of "online" or "offline") and
     "imageSource" which is a URL for a user avatar.
