@@ -7,7 +7,7 @@ Workshop - Contacts List
 ------------------------
 
 The next package that we look at is the contacts list.
-As the name suggests it is a custom element that shows a list of contacts for our chat application.
+It is a custom element that shows a list of contacts for our chat application.
 
     git clone https://github.com/briandipalma/spa-2014-contacts-list
 
