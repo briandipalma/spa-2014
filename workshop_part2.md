@@ -48,7 +48,19 @@ To start
     this.addEventListener('event', (event) => console.log('click'));
     ```
 
-4. Register the custom element
+4. Serve the package
+
+	All these packages can be served by a static server rooted at the package directory.
+	One is included in the package and can be launched with the command.
+
+	```bash
+	$ npm run serve
+	```
+
+    The included server will serve the package at http://127.0.0.1:8080
+    Opening the console should show none of the log lines from the element.
+
+5. Register the custom element
 
     For the browser to match up a Custom Element tag name with your JS Custom Element class you need to register it.
     The method to use for registration is `document.registerElement`.
@@ -57,9 +69,10 @@ To start
     Inside `index.html` register `ContactsListElement` under the name `spa2014-contacts-list`.
     The module object will provide the element as `module.ContactsListElement` since it's exported by `index`.
 
-    d
+    Now add a `spa2014-contacts-list` tag to the body of the page.
+    Refresh and verify that the element logs are in the console.
 
-5. S
+6. S
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
 
