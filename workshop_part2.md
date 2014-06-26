@@ -14,7 +14,10 @@ To start
     git clone https://github.com/briandipalma/spa-2014-contacts-list
 
 1. Open `index.html`
-
+    
+    There is one new `script` tag.
+    
+    It's the Custom Elements polyfill.
     We haven't used html imports/templates/shadow dom polyfills.
     
     The new script we've added is the custom-elements polyfill, which is part of
@@ -40,7 +43,7 @@ To start
     
     A Custom Element is just a HTML element so standard DOM methods will work on it 
     (this).
-    
+
 2. Register the custom element implementation ContactsListElement in index.html
     under the name spa2014-contacts-list
     
