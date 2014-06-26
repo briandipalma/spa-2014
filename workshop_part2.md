@@ -19,7 +19,7 @@ To start
     It's the Custom Elements polyfill, part of the polymer project.
     https://github.com/Polymer/CustomElements
 
-    `System.config` now has `css` and `text` loading plugins which allow the ES6 module loader to load css and text files.
+    `System.config` now has `css` and `text` loading plugins which allow the `System` module loader to load css and text.
     The CSS plugin automatically attaches the css to the head as soon as you import the css module.
     The text plugin returns the content of the file as a javascript string.
     The other packages are for integration later.
@@ -32,6 +32,16 @@ To start
 
 3. Open `src/ContactsListElement.js`
 
+    The module exports a class that extends `HTMLElement` and has the Custom Element callbacks as methods.
+
+    A Custom Element is just a HTML element so standard DOM methods will work on it.
+    For example in the `createdCallback` callback the element injects its template into its DOM structure.
+
+    ```javascript
+    this.innerHTML = contactsListTemplate;
+    ```
+
+    As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
 
     The state member variable holds the information that needs to be added to the DOM, it's an ES6 Map.
@@ -41,8 +51,6 @@ To start
     render is the function that's called whenever the state changes. For simplicity you can
     discard the entire DOM everytime.
 
-    A Custom Element is just a HTML element so standard DOM methods will work on it 
-    (this).
 
 4. Register the custom element implementation ContactsListElement in index.html
     under the name spa2014-contacts-list
