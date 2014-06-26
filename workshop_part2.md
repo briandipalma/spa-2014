@@ -25,10 +25,10 @@ To start
     The text plugin returns the content of the file as a javascript string.
     The other packages are for integration later.
 
-2. Open `src\index.js`
+2. Open `src/index.js`
 
-    This is our package's entry point, it's the module that's loaded in the `index.html` file.
-    You can see that it re-exports `ContactsListElement`.
+    This is our package's entry point. It's also the module that's loaded in the `index.html` file.
+    You can see that it re-exports `ContactsListElement` from the `'./ContactsListElement'` module.
     This custom element is already wired up to be notified of model changes.
 
     Look at ContactsListElement.js
