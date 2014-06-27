@@ -72,7 +72,8 @@ To start
     Now add a `spa2014-contacts-list` tag to the body of the page.
     Refresh and verify that the element logs are in the console.
 
-6. S
+6. Create custom element template
+
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
 
