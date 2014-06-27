@@ -90,7 +90,8 @@ To start
 	<section>
 	</section>
 	```
-
+	Reloading should show your template inside the Custom Element.
+	You can use the browser development tools to investigate the internals of the element.
 
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
