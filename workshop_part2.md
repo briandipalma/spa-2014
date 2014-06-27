@@ -72,7 +72,17 @@ To start
     Now add a `spa2014-contacts-list` tag to the body of the page.
     Refresh and verify that the element logs are in the console.
 
-6. Create custom element template
+6. Create the custom element template
+
+	Custom Elements may have static and dynamic content. For storing static content you may find templates convenient.
+	Templates, the Web Components specification, is one way of representing an element's template.
+	For this package we are showing how you can use the ES6 module loader to achieve the same effect.
+
+	This package's template is kept in `template/contactsList.text`, opening it you will see it's empty.
+	Once the list of contacts is displayed create a template that represents the
+    component.  The template should have a header with the text 'Contacts', an
+    <hr> and a section for the contacts to be placed.
+
 
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
@@ -97,10 +107,6 @@ To start
         //Append to documentFragment.
     });
     // append the documentFragment to your
-
-5. Once the list of contacts is displayed create a template that represents the
-    component.  The template should have a header with the text 'Contacts', an
-    <hr> and a section for the contacts to be placed.
 
 6. Change your render method to place the document fragment in the contacts section.
     You can save the contacts section during the attachedCallback as this.contactsSection
