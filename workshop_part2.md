@@ -74,14 +74,22 @@ To start
 
 6. Create the custom element template
 
-	Custom Elements may have static and dynamic content. For storing static content you may find templates convenient.
+	Custom Elements may have static and dynamic content.
+	For storing static content you may find templates convenient.
 	Templates, the Web Components specification, is one way of representing an element's template.
 	For this package we are instead showing how you can use the ES6 module loader to achieve the same effect.
 
 	This package's template is kept in `template/contactsList.text`, opening it you will see it's empty.
 
 	The template should have a header with the text 'Contacts', an `<hr>` and a `<section>` for the contacts to be
-	placed.
+	placed. Something like this would be the simplest.
+
+	```html
+	<div>Contacts</div>
+	<hr>
+	<section>
+	</section>
+	```
 
 
     As there is no default model solution for Web Components we've had to provide our own.
