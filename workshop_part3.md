@@ -4,7 +4,7 @@ Topic - Workflow
 http://slides.com/kybernetikos/pacman#/
 
 Workshop - Integrated with other Custom Elements.
-------------------------
+-------------------------------------------------
 
 After completing the first workshop
 
@@ -20,7 +20,32 @@ To start
 
 	git clone https://github.com/briandipalma/spa-2014-app
 
-1. Combine with other Custom Elements.
+1. Open `src/index.js`
+
+	All the application Custom Elements are imported and registered in this module.
+
+2. Serve the package
+
+	All these packages can be served by a static server rooted at the package directory.
+	One is included in the package and can be launched with the command.
+
+	```bash
+	$ npm run serve
+	```
+
+	The included server will serve the package at `http://127.0.0.1:8080`
+
+3. Log in
+
+	Navigating to `http://127.0.0.1:8080` will present you with a simple login form.
+	Entering any username and password will work to login.
+	Investigating the DOM will show some of the Custom Elements registered in `src/index.js`.
+
+	The application template is in the `template/spaApplication.text` file.
+
+4. Add the `spa2014-contacts-list` element
+
+	
 
 All the custom elements are registered inside src\index.js including spa2014-contacts-list.
 
