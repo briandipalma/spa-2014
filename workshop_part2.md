@@ -103,12 +103,21 @@ To start
 
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
-    `render` is the function that's called whenever the state changes. For simplicity you can
-    discard the entire DOM everytime.
+    `render` is the function that's called whenever the state changes.
 
-    The state member variable holds the information that needs to be added to the DOM, it's an ES6 Map.
-    It's keys are usernames and values are a objects with keys "status" (value of "online" or "offline") and
-    "imageSource" which is a URL for a user avatar.
+    The `state` member variable holds the information that needs to be added to the DOM, it's an ES6 Map.
+    It's keys are usernames and the values are a objects containing contact data.
+
+	The contact data has the keys `status` (value of `online` or `offline`) and `imageSource` which is an avatar URL.
+
+	Here is an example contact data Object.
+
+	```javascript
+	{
+		status: "online",
+		imageSource: "https://avatars0.githubusercontent.com/u/598730?s=140"
+	}
+	```
 
 8. In the render method
 
