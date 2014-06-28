@@ -45,12 +45,32 @@ To start
 
 4. Add the `spa2014-contacts-list` element
 
-	
+	To add the `spa2014-contacts-list` element to the application it must added to the template.
+	Open up the app template and add a `spa2014-contacts-list` element just under the logged-out div.
 
-All the custom elements are registered inside src\index.js including spa2014-contacts-list.
+	```html
+	<div class="logged-out">
+		<spa2014-contacts-list></spa2014-contacts-list>
+	```
+
+	Import the element and register it before you register `spa2014-app` in the `registerApplicationElements` method.
+
+	```javascript
+	import {ContactsListElement} from 'spa-2014-contacts-list';
+	
+	export function registerApplicationElements() {
+		...
+		document.registerElement('spa2014-contacts-list', ContactsListElement);
+		...
+	}
+	```
+
+	Reloading the application will show an old version of the `spa2014-contacts-list`.
+
+5. All the custom elements are registered inside src\index.js including spa2014-contacts-list.
 
 If you run npm run serve you can see a simple chat application without the spa2014-contacts-list element.
 
-Open up the app template and add spa2014-contacts-list just under the logged-out div
+
 
 You will see that the spa2014-contacts-list in the application is the old incomplete one. To use your newer version of it open a cmd window, navigate to your spa2014-contacts-list and enter npm link Then from the cmd window navigate to the spa-2014-app and as administrator in Windows run npm link spa-2014-contacts-list.
