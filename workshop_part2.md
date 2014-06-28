@@ -50,15 +50,15 @@ To start
 
 4. Serve the package
 
-All these packages can be served by a static server rooted at the package directory.
-One is included in the package and can be launched with the command.
-
-```bash
-$ npm run serve
-```
-
-The included server will serve the package at http://127.0.0.1:8080
-Opening the console should show none of the log lines from the element.
+	All these packages can be served by a static server rooted at the package directory.
+	One is included in the package and can be launched with the command.
+	
+	```bash
+	$ npm run serve
+	```
+	
+	The included server will serve the package at http://127.0.0.1:8080
+	Opening the console should show none of the log lines from the element.
 
 5. Register the custom element
 
@@ -92,7 +92,10 @@ Opening the console should show none of the log lines from the element.
 	```
 	Reloading should show your template inside the Custom Element.
 	You can use the browser development tools to investigate the internals of the element.
+	As you will add the contacts to the `<section>` element you might find it useful to have a class reference to it.
+	The best place to do this would be after the element is attached to the DOM in `attachedCallback`.
 
+7.
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
 
