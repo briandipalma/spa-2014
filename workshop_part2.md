@@ -157,11 +157,11 @@ To start
 9. Add an event listener 
 
 	We will add an event listener to react to contact selection.
-	Like other DOM methods `addEventListener` can called with the class as the target of the method.
-	The `attachedCallback` is most logical place to register the event listener.
+	Like other DOM methods `addEventListener` is called with the class as the target of the method.
+	The `attachedCallback` is the most logical place to register the event listener.
 
 	```javascript
-	this.addEventListener('click');
+	this.addEventListener('click', callback);
 	```
 
 	You can use either arrow functions or function binding to callback the `_onContactSelected` method.
@@ -172,9 +172,18 @@ To start
 	```
 
 	In `_onContactSelected` use destructuring to extract the relevant details from the event.
-	Destructuring works to multiple levels.
+	Destructuring works to multiple levels. You want two values from the event `target`, `tagName` and `textContent`.
 
-	Look at the page in the browser, and click on one of the contact rows. You
-	should see a log line in the console.
-	
+	We only want to react to clicks on the contact row.
+	So verify that the tag name is a `DIV` before executing the action.
+
+	```javascript
+	if (tagName === 'DIV') {
+		this.contactsListActions.contactSelected(textContent);
+	}
+	```
+
+	Reload the page in the browser, and click on one of the contact rows. You should see a log line in the console.
 	Look at `contactSelected` in `src/ContactsListActions.js` to see the log line which uses String templates.
+
+Now it's time to integrate this Custom Element in an application.
