@@ -130,6 +130,8 @@ To start
 	({status}) => {}
 	```
 
+	Once you reload you should see logging for a couple of contacts.
+
 8. In the render method
 
 	iterate over the state map and display its data in the DOM.
