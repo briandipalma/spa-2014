@@ -156,15 +156,25 @@ To start
 
 9. Add an event listener 
 
-	to yourself to handle click events.
-	Use arrow functions to minimize  boilerplate for the callback.  Pass the
-	mouse event in to the _onContactSelected method.
-	
-	Use destructuring to extract all the details from the event.
+	We will add an event listener to react to contact selection.
+	Like other DOM methods `addEventListener` can called with the class as the target of the method.
+	The `attachedCallback` is most logical place to register the event listener.
+
+	```javascript
+	this.addEventListener('click');
+	```
+
+	You can use either arrow functions or function binding to callback the `_onContactSelected` method.
+	Pass the mouse event in to `_onContactSelected` if you are using arrow functions. Like so
+
+	```javascript
+	(mouseEvent) => this._onContactSelected(mouseEvent)
+	```
+
+	In `_onContactSelected` use destructuring to extract the relevant details from the event.
 	Destructuring works to multiple levels.
-	
+
 	Look at the page in the browser, and click on one of the contact rows. You
 	should see a log line in the console.
 	
-	Look at contactSelected in ContactsListActions.js to see the console log line
-	which uses String templates.
+	Look at `contactSelected` in `src/ContactsListActions.js` to see the log line which uses String templates.
