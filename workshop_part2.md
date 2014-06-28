@@ -119,6 +119,17 @@ To start
 	}
 	```
 
+	Verify that state has contact data by using the `forEach()` Map method and logging the data.
+	The callback that you provide `forEach()` is given the value as the first argument.
+	As you are only interested in two fields on the contact data this would an opportunity to use destructuring.
+	You can also use an arrow function to reduce the boilerplate.
+
+	If you don't remember how destructuring works here's an example.
+
+	```javascript
+	({status}) => {}
+	```
+
 8. In the render method
 
 	iterate over the state map and display its data in the DOM.
