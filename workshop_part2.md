@@ -147,13 +147,9 @@ To start
 	this.contactsContainer.appendChild(documentFragment);
 	```
 
-	Inside your Map iteration create a `contactRow` `div` using `document.createElement` to hold the contact.
-	
-    this.state.forEach((contactState, contact) => {
-        //create DOM elements to hold the contact data
-        //which consists of the contact avatar and contact name.
-        //Append to documentFragment.
-    });
+	Inside your Map iteration create a `contactRow` `div` to hold the contact data using `document.createElement`.
+	Create a `span` for the contact name and an `img` for the `imageSource` value for the contact avatar.
+	Set the contact name using `textContent` on your `contactName` `span` and `imageSource` on the `img` `src`.
     
 9. Add an event listener to yourself to handle click events.
     Use arrow functions to minimize  boilerplate for the callback.  Pass the
