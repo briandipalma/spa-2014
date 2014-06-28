@@ -55,3 +55,6 @@ To start
 
 	Reloading the application will show the latest `spa2014-contacts-list` package.
 
+A more normal workflow would have linked the two package together during development and once development was finished
+a new version of `spa2014-contacts-list` would have been released.
+For the purposes of the workshop though we wanted to focus on a Custom Element package on its own.
