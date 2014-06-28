@@ -150,7 +150,10 @@ To start
 	Inside your Map iteration create a `contactRow` `div` to hold the contact data using `document.createElement`.
 	Create a `span` for the contact name and an `img` for the `imageSource` value for the contact avatar.
 	Set the contact name using `textContent` on your `contactName` `span` and `imageSource` on the `img` `src`.
-    
+
+	Using `appendChild` add the avatar and contact name to the `contactRow` and the row to the document fragment.
+	When you reload you should now have your contacts displayed.
+
 9. Add an event listener to yourself to handle click events.
     Use arrow functions to minimize  boilerplate for the callback.  Pass the
     mouse event in to the _onContactSelected method.
