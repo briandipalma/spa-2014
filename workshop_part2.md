@@ -132,25 +132,30 @@ To start
 
 	Once you reload you should see logging for a couple of contacts.
 
-8. In the render method
+8. Render the contacts
 
-	iterate over the state map and display its data in the DOM.
-    
-    Use a document fragment to hold the DOM to add while iterating over the Map.
-    
-    var documentFragment = document.createDocumentFragment();
-    
+	We will use a document fragment to hold the DOM to add while iterating over the `state` Map.
+	If you are unsure how document fragements work at the top of your `render` method add
+
+	```javascript
+	var documentFragment = document.createDocumentFragment();
+	```
+
+	After your `forEach()` attach the document fragment to the contacts container.
+
+	```javascript
+	this.contactsContainer.appendChild(documentFragment);
+	```
+
+	Inside your Map iteration create a `contactRow` `div` using `document.createElement` to hold the contact.
+	
     this.state.forEach((contactState, contact) => {
         //create DOM elements to hold the contact data
         //which consists of the contact avatar and contact name.
         //Append to documentFragment.
     });
-    // append the documentFragment to your
-
-6. Change your render method to place the document fragment in the contacts section.
-    You can save the contacts section during the attachedCallback as this.contactsSection
     
-7. Add an event listener to yourself to handle click events.
+9. Add an event listener to yourself to handle click events.
     Use arrow functions to minimize  boilerplate for the callback.  Pass the
     mouse event in to the _onContactSelected method.
 
