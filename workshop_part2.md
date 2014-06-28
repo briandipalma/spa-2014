@@ -50,15 +50,15 @@ To start
 
 4. Serve the package
 
-	All these packages can be served by a static server rooted at the package directory.
-	One is included in the package and can be launched with the command.
-	
-	```bash
-	$ npm run serve
-	```
-	
-	The included server will serve the package at http://127.0.0.1:8080
-	Opening the console should show none of the log lines from the element.
+All these packages can be served by a static server rooted at the package directory.
+One is included in the package and can be launched with the command.
+
+```bash
+$ npm run serve
+```
+
+The included server will serve the package at http://127.0.0.1:8080
+Opening the console should show none of the log lines from the element.
 
 5. Register the custom element
 
