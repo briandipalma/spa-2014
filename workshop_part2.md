@@ -90,12 +90,17 @@ To start
 	<section>
 	</section>
 	```
+
 	Reloading should show your template inside the Custom Element.
 	You can use the browser development tools to investigate the internals of the element.
-	As you will add the contacts to the `<section>` element you might find it useful to have a class reference to it.
-	The best place to do this would be after the element is attached to the DOM in `attachedCallback`.
 
-7.
+	As you will add the contacts to the `<section>` element you might find it useful to have a reference to it.
+	The best place to do this would be after the element is attached to the DOM in `attachedCallback`.
+	As the class is an element you can use `this.querySelector(...)` to find the section element.
+	Store it as a class member variable named `this.contactsContainer`.
+
+7. Model
+
     As there is no default model solution for Web Components we've had to provide our own.
     This custom element is already wired up to be notified of model changes.
 
